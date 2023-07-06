@@ -83,7 +83,67 @@ html, body {
 	border: 3px dashed white;
 	text-align: center;
 }
-
+@mixin clearfix {
+	&:after {
+	display: table;
+	clear: both;
+	}
+	}
+	html {
+	box-sizing: border-box;
+	}
+	*, *:before, *:after {
+	box-sizing: inherit;
+	}
+	
+	body {
+	background-color: rgb(62, 167, 63);
+	min-height: 100%;
+	}
+	
+	a {
+	text-decoration: none;
+	color: inherit
+	}
+	
+	.main-header {
+	background-color: #000;
+	padding: 5px 40px 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+	@media (min-width: 1025px) {
+	.main-header {
+	flex-direction: row;
+	justify-content: space-between;
+	}
+	}
+	
+	.name {
+	color: white;
+	font-size: 1.35em;
+	margin: 0;
+	}
+	a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+	}
+	
+	.main-nav {
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	}
+	a {
+	text-align: center;
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: .95em;
+	color: #3acec2;
+	text-transform: uppercase;
+	}
 h1 {
 	/* FONT-FAMILY GOES HERE CHOOSE FROM TYPEKIT OR GOOGLE FONTS */
 	font-family: 'Bitter', serif;
@@ -128,5 +188,146 @@ nav {
 		line-height: 1.5em
 	}
 }
+@mixin clearfix {
+	&:after {
+	display: table;
+	clear: both;
+	}
+	}
+	html {
+	box-sizing: border-box;
+	}
+	*, *:before, *:after {
+	box-sizing: inherit;
+	}
+	
+	body {
+	background-color: rgb(70, 164, 180);
+	min-height: 100%;
+	}
+	
+	a {
+	text-decoration: none;
+	color: inherit
+	}
+	 /* Code for cards */
 
+/* sets everything to zero */
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+ 
+  .cardphoto img {
+    display: block;
+    max-width: 100%; /* makes image responsive if needed but makes sure it doesn't stretch */
+  }
+ 
+  /* make the Section class cards here.  */
+ 
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+ 
+  /* make the card flex. The default is row so change flex direction to vertical. */
+  .card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    min-width: 250px;
+    max-width: 350px;
+    border-radius: 0.5rem;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(16, 70, 93);
+    box-shadow: 0 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+  }
+  .card:hover {
+    transition: all 0.1s ease-in;
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  }
+ 
+  .cardphoto {
+    max-height: 250px;
+    overflow: hidden;
+  }
+ 
+  .cardarticle {
+    padding: 2.5rem;
+    flex-grow: 1;
+  }
+ 
+  /* typography */
+  .cardH1 {
+    font-size: 2rem;
+    margin: 0;
+    color: rgb(38, 122, 124);
+  }
+ 
+  .card p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+ 
+  .card footer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #1a6e7f;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+  }
+
+  h3{
+      color:#444;
+  }
+ 
+  .card p {
+      color: rgb(64, 135, 144);
+  }
+	.main-header {
+	background-color: #65b8d9;
+	padding: 5px 40px 10px 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
+	@media (min-width: 1025px) {
+	.main-header {
+	flex-direction: row;
+	justify-content: space-between;
+	}
+	}
+	
+	.name {
+	color: white;
+	font-size: 1.35em;
+	margin: 0;
+	}
+	a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+	}
+	
+	.main-nav {
+	margin: 0;
+	list-style-type: none;
+	display: flex;
+	}
+	a {
+	text-align: center;
+	display: inline-block;
+	padding: 10px 15px;
+	font-size: .95em;
+	color: #050705;
+	text-transform: uppercase;
 
